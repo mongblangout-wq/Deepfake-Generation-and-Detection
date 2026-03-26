@@ -1,0 +1,14 @@
+# Dataset
+data/img_align_celeba/
+data/crawled_images/
+data/fake_images/
+
+# Checkpoints & Models
+checkpoints/
+*.pth
+*.pt
+
+# Python caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

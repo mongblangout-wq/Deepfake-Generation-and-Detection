@@ -1,0 +1,14 @@
+torch>=2.0.0
+torchvision>=0.15.0
+transformers
+timm
+scikit-learn
+pytorch-fid
+lpips
+selenium
+webdriver-manager
+mtcnn
+numpy
+matplotlib
+Pillow
+tqdm
