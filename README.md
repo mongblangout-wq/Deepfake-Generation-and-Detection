@@ -82,8 +82,9 @@ Generation (Inference): checkpoints/ 폴더에 학습된 가중치 파일(.pth)�
 
 ```bash
 python generate.py
-Training:
 ```
+
+Training:
 
 ```bash
 python train/train_ddpm.py
