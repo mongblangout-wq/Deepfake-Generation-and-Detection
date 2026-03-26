@@ -40,7 +40,7 @@
 
 | Category | Details |
 | :--- | :--- |
-| **Framework** | PyTorch |
+| **Framework** | PyTorch, Torchvision |
 | **Generative AI** | ProGAN, DDPM, DDIM |
 | **Computer Vision** | OpenCV, PIL, MTCNN, Vision Transformer (ViT) |
 | **Analysis & Eval** | Scikit-learn, pytorch-fid, lpips |
@@ -54,15 +54,40 @@
 .
 ├── data/
 │   ├── crawling.py         # Selenium 기반 이미지 수집 및 MTCNN 전처리
-│   └── dataset.py          # CelebA 및 크롤링 데이터 커스텀 데이터셋 정의
+│   └── dataset.py          # 데이터 로더 및 커스텀 데이터셋 정의
 ├── models/
-│   ├── progan.py           # ProGAN Generator & Discriminator 구조
-│   ├── ddpm.py             # U-Net 기반 Diffusion 모델 구조
-│   └── detector.py         # ViT 기반 Deepfake Detector 클래스
+│   ├── progan.py           # ProGAN Generator & Discriminator 정의
+│   ├── ddpm.py             # U-Net 기반 Diffusion 모델 정의
+│   └── detector.py         # ViT 기반 Deepfake Detector 정의
 ├── train/
 │   ├── train_progan.py     # ProGAN 단계별 학습 스크립트
-│   └── train_ddpm.py       # DDPM 학습 및 체크포인트 저장 스크립트
+│   └── train_ddpm.py       # DDPM 학습 및 체크포인트 저장
 ├── eval/
-│   ├── evaluate.py         # FID, LPIPS 이미지 품질 평가 지표 산출
-│   └── inference.py        # Detection 모델 추론 및 혼동 행렬 지표 산출
-└── .gitignore              # 대용량 데이터셋 및 가중치 파일 제외 설정
+│   ├── evaluate.py         # FID, LPIPS 품질 평가 지표 산출
+│   └── inference.py        # Detection 모델 추론 및 지표 산출
+├── generate.py             # 학습된 모델 기반 가짜 이미지 생성 도구 (Inference)
+└── .gitignore              # 대용량 데이터 및 가중치 파일 관리
+
+## 🚀 Getting Started
+
+### Installation
+```bash
+git clone [https://github.com/YourID/Deepfake-Generation-and-Detection.git](https://github.com/YourID/Deepfake-Generation-and-Detection.git)
+cd Deepfake-Generation-and-Detection
+pip install -r requirements.txt
+###
+Usage
+Generation (Inference): checkpoints/ 폴더에 학습된 가중치 파일(.pth)을 배치한 후 실행합니다.
+
+Bash
+python generate.py
+Training:
+
+Bash
+python train/train_ddpm.py
+📊 Current Status
+[x] 데이터 수집 및 전처리 파이프라인 구축 완료
+
+[x] ProGAN/DDPM 아키텍처 구현 및 초기 학습 검증 완료
+
+[ ] 고품질 데이터 대규모 반복 학습 및 생성 지표 최적화 진행 중
