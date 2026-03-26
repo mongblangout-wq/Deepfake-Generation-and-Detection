@@ -67,6 +67,7 @@
 │   └── inference.py        # Detection 모델 추론 및 지표 산출
 ├── generate.py             # 학습된 모델 기반 가짜 이미지 생성 도구 (Inference)
 └── .gitignore              # 대용량 데이터 및 가중치 파일 관리
+```
 
 ## 🚀 Getting Started
 
