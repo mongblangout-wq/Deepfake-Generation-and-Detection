@@ -76,19 +76,15 @@
 git clone [https://github.com/YourID/Deepfake-Generation-and-Detection.git](https://github.com/YourID/Deepfake-Generation-and-Detection.git)
 cd Deepfake-Generation-and-Detection
 pip install -r requirements.txt
-###
-Usage
+```
+### Usage
 Generation (Inference): checkpoints/ 폴더에 학습된 가중치 파일(.pth)을 배치한 후 실행합니다.
 
-Bash
+```bash
 python generate.py
 Training:
+```
 
-Bash
+```bash
 python train/train_ddpm.py
-📊 Current Status
-[x] 데이터 수집 및 전처리 파이프라인 구축 완료
-
-[x] ProGAN/DDPM 아키텍처 구현 및 초기 학습 검증 완료
-
-[ ] 고품질 데이터 대규모 반복 학습 및 생성 지표 최적화 진행 중
+```
